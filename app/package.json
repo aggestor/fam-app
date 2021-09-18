@@ -1,0 +1,27 @@
+{
+  "name": "store-genius-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "product": "yarn run build && next export",
+    "start":"SET NODE_ENV=production & node server.js"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "jquery": "^3.6.0",
+    "next": "latest",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-to-pdf": "^0.0.14"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4"
+  }
+}

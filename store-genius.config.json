@@ -1,0 +1,17 @@
+{
+  "mode": "dev",
+  "package-manager": "yarn",
+  "server": "store-genius-back",
+  "front": "store-genius-front",
+  "app": {
+    "name": "Store Genius",
+    "codeName": "store-genius",
+    "author": "Aggestor",
+    "version": "Beta@2.0",
+    "API": "REST",
+    "repository": "https://github.com/aggestor/store-genius.git"
+  },
+  "co-workers": {},
+  "theme": "teal-purple-white(or darken-blue)",
+  "typo": "Tahoma, Georgia"
+}
