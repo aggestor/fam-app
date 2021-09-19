@@ -1,3 +1,7 @@
+:root{
+	--secondary:#00BCD4;
+	--secondary-hover :#0090a3;
+}
 .scrollBar::-webkit-scrollbar-track
 {
 	background-color: rgba(243, 244, 246);
@@ -18,4 +22,27 @@
 .scrollBar::-webkit-scrollbar-thumb:hover
 {
 	background-color: #b3b2b2;
+}
+.secondary-border{
+	border-color:var(--secondary);
+	border: 3px solid var(--secondary-hover);
+}
+.secondary-text{
+	color: var(--secondary);
+}
+.secondary-bg{
+	background: var(--secondary);
+	border: 3px solid transparent;
+}
+.secondary-bg:hover{
+	background: var(--secondary-hover);
+}
+.secondary-bg:focus{
+	border-color:  #00d5f1b2;
+}
+.dark{
+	background: #1e2330;
+}
+.dark-s{
+	background: #201330;
 }

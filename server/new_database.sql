@@ -2,6 +2,7 @@
 CREATE DATABASE store_genius_2_0;
 USE store_genius_2_0;
 
+
 -- App configurations
 CREATE TABLE _app_config(
     _apc_id VARCHAR(255) NOT NULL,

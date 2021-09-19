@@ -1,12 +1,12 @@
 {
   "name": "store-genius-app",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "product": "yarn run build && next export",
-    "start":"SET NODE_ENV=production & node server.js"
+    "start": "SET NODE_ENV=production & node mango.js"
   },
   "dependencies": {
     "aos": "^2.3.4",
@@ -20,8 +20,11 @@
     "react-to-pdf": "^0.0.14"
   },
   "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/react": "^17.0.21",
     "autoprefixer": "^10.2.6",
     "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.4"
+    "tailwindcss": "^2.2.4",
+    "typescript": "^4.4.3"
   }
 }
