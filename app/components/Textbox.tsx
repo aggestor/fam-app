@@ -26,4 +26,10 @@ function Textbox({
     </div>
   );
 }
+Textbox.defaultProps = {
+  readOnly: false,
+  placeHolder: "Label name",
+  type: "text",
+  event:()=>{}
+}
 export default Textbox;

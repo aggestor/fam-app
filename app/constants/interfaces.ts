@@ -46,7 +46,7 @@ export interface _Textbox{
     designParent?: string;
     value: string;
     readOnly?: boolean,
-    name?:string
+    name?: string
 }
 
 export interface _Button {
@@ -61,5 +61,8 @@ export interface _Checkbox{
     item?: any,
     onChangeValue?: (value:boolean) => {},
     label?:string
-    
+}
+export interface _ThemeIllustrationCard{
+    isDark?: boolean,
+    onChoose:(type:string)=>void
 }
