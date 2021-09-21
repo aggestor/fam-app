@@ -1,3 +1,5 @@
+import { ReactElement } from "react";
+
 export interface _Header {
     title: string,
     keywords?: string,
@@ -65,4 +67,23 @@ export interface _Checkbox{
 export interface _ThemeIllustrationCard{
     isDark?: boolean,
     onChoose:(type:string)=>void
+}
+
+export interface _App{
+  readonly init?: string,
+  readonly check?:string
+}
+
+export interface _CompanyConfig {
+  name:string;
+  address :string;
+  mail?:string;
+  owner?:string;
+  phone:string;
+}
+
+export interface _MenuItem {
+  router: string;
+  name: string;
+  icon?:ReactElement
 }

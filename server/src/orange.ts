@@ -1,10 +1,10 @@
-import express from "express"
+import express, { Application } from "express"
 import hpp from "hpp";
 import cors from "cors"
-const main = async () => {
-  const app = express();
+const main = async () :Promise<Application> => {
+  const app : Application = express();
 
-  const PORT = process.env.PORT || 38493;
+  const PORT :number | string = process.env.PORT || 38493;
 
   app.listen(PORT, () => console.log("Server ready on http://localhost:38493"));
 

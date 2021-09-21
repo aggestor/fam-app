@@ -4,16 +4,17 @@ import { ButtonPrimary } from "../components/Buttons";
 import Headers from "../components/Headers";
 import { FaArrowRight} from "react-icons/fa"
 import { ThemeContext } from "../constants/ThemeContext";
-interface Props {}
+import { setInitAppConfig } from "../api/_app.config";
 
-export default function config({}: Props): ReactElement {
+
+export default function config({}): ReactElement {
   const { theme } = React.useContext(ThemeContext);
   //getting application informations
-  useEffect(() => {
-    
-  },[])
-  function handleNextEvent(): void{
-    
+    //getting user informations
+    function handleNextEvent(): void{
+      const { platform, userAgent } = navigator
+      
+      //setInitAppConfig(platform, userAgent).then(()=>{})
     Router.push("/config/company");
   }
   return (

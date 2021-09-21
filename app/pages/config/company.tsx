@@ -6,22 +6,27 @@ import { FaArrowRight } from "react-icons/fa";
 import { ThemeContext } from "../../constants/ThemeContext";
 import Textbox from "../../components/Textbox";
 import useForm from "../../hooks/useForm";
+import { setCompanyConfig } from "../../api/_company.config";
 interface Props {}
 
 export default function config({}: Props): ReactElement {
   const { theme } = React.useContext(ThemeContext);
   //getting application informations
+  const [{ name, address, mail, owner,phone }, handleChange] = useForm({
+    name: "",
+    address: "",
+      mail: "",
+    owner: "",
+      phone:""
+  });
   useEffect(() => {}, []);
     function handleNextEvent(e): void {
       e.preventDefault()
+      // setCompanyConfig({ name, address, mail, owner, phone }).then(() => {
+      //   //do something with callback
+      // });
     Router.push("/config/superuser");
   }
-  const [{ name, mail, website, owner }, handleChange] = useForm({
-    name: "",
-    mail: "",
-      website: "",
-      owner:""
-  });
   return (
     <>
       <Headers title="Configuration Entreprise | Store Genius 2.0" />
@@ -56,25 +61,25 @@ export default function config({}: Props): ReactElement {
                 event={handleChange}
               />
               <Textbox
-                value={mail}
-                name="mail"
+                value={phone}
+                name="phone"
                 design="my-1"
                 label="Téléphone"
                 event={handleChange}
               />
               <Textbox
-                value={mail}
-                name="mail"
+                value={address}
+                name="address"
                 design="my-1"
-                label="E-Mail (facultatif)"
+                label="Adresse de l'entreprise"
                 event={handleChange}
               />
 
               <Textbox
-                value={website}
-                name="website"
+                value={mail}
+                name="mail"
                 design="my-1"
-                label="Site web (facultatif)"
+                label="E-mail (facultatif)"
                 event={handleChange}
               />
               <Textbox
@@ -83,8 +88,11 @@ export default function config({}: Props): ReactElement {
                 design="my-1"
                 label="Propriétaire (facultatif)"
                 event={handleChange}
-                          />
-                          <small className={theme.text.common}>Avant de cliquer sur "Suivant", rassurez-vous d'entrer les bonnes informations.</small>
+              />
+              <small className={theme.text.common}>
+                Avant de cliquer sur "Suivant", rassurez-vous d'entrer les
+                bonnes informations.
+              </small>
               <ButtonPrimary
                 design="w-1/3 mt-3 transform transition duration-500 hover:scale-95"
                 event={handleNextEvent}

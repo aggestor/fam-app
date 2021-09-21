@@ -17,14 +17,14 @@ const Theme: _Theme = {
     },
     background: {
       primary: "bg-white",
-      secondary: "bg-gray-100",
+      secondary: "bg-gray-300",
     },
   },
   dark: {
     border: {
       primary: "border-purple-700",
       secondary: "secondary-border",
-      common: "border-gray-600",
+      common: "border-red-600",
     },
     text: {
       primary: "text-purple-700",
